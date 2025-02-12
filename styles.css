@@ -11,126 +11,135 @@ body {
   padding-top: 60px;
 }
 
+section {
+  margin-bottom: 30px;
+}
+
+.caption {
+  font-size: var(--caption-size, 22px);
+  font-weight: bold;
+  text-align: center;
+  color: var(--caption-color, black);
+}
+
+.description {
+  font-size: 14px;
+  text-align: center;
+  color: var(--description-color, black);
+}
+
 /* Add your header styles here */
 header {
-  width: 100%;
+  --caption-color: white;
   background-color: #333333;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 25px;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#title {
-  font-weight: bold;
-  margin: 10px;
+nav {
+  display: flex;
 }
 
 nav a {
+  margin: auto 10px;
   color: white;
   text-decoration: none;
   font-size: 14px;
-  margin: 10px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: orange;
 }
 
 /* Add your hero section styles here */
-#hero-section {
-  background-color: #f4a621;
-  margin: 15px 25px;
-  padding: 30px 0 25px 0;
+#hero {
+  background-color: orange;
+  margin: 30px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  --caption-color: white;
+  --description-color: white;
   gap: 5px;
-  box-shadow: 0 4px 6px rgba(244, 166, 33, 0.1);
 }
 
-#hero-section div:nth-child(1) {
-  font-weight: bold;
-  color: white;
-}
-
-#hero-section div:nth-child(2) {
-  font-size: 12px;
-  color: white;
-}
-
-.hero-btn {
+#hero a {
+  color: orange;
   background-color: white;
-  color: #f4a621;
   font-weight: bold;
-  font-size: 12px;
-  padding: 5px 15px;
-  border-radius: 5px;
-  margin-bottom: 5px;
   text-decoration: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#hero a:hover {
+  text-decoration: underline;
 }
 
 /* Add your about section styles here */
-.caption {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-#about-section {
-  align-items: center;
+#about {
   margin-bottom: 50px;
-}
-
-#about-section div:nth-child(1) {
-  font-weight: bold;
-}
-
-#about-section div:nth-child(2) {
-  font-size: 14px;
-  text-align: center;
 }
 
 /* Add your projects section styles here */
 .container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
   gap: 20px;
 }
 
-#first-project,
-#second-project,
-#third-project {
+.project {
   background-color: #f0f0f0;
   border-radius: 5px;
+  padding: 15px;
   box-shadow: 0 4px 6px rgba(80, 80, 80, 0.2);
-  text-align: center;
-  padding: 15px 20px 40px 20px;
+  flex-basis: 230px;
+  --caption-size: 16px;
 }
-
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
-
-  #first-project,
-  #second-project,
-  #third-project {
-    margin: 0 30px;
-    padding: 15px;
-  }
-  
-}
-
 
 /* Add your contact form styles here */
 
 /* Add your footer styles here */
 
 /* Add your responsive design styles here */
+@media (max-width: 500px) {
+  header {
+    padding-right: 10px;
+  }
+
+  nav a {
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 739px) {
+  .project {
+    flex-grow: 1;
+    margin: 0 25px;
+  }
+
+  .container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 739px) and (min-width: 545px) {
+  .project:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .project:nth-child(2) {
+    margin-left: 0;
+  }
+}
