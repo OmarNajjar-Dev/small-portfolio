@@ -7,54 +7,103 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Add your header with navigation here -->
+    <!-- 🌍 Start Header Section -->
     <header>
-      <p class="caption">MyPortfolio</p>
+      <h1 class="caption">MyPortfolio</h1>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
+    <!-- 🌍 End Header Section -->
 
     <main>
-      <!-- Add your hero section here -->
+       <!-- 🚀 Start Hero Section -->
       <section id="hero">
-        <p class="caption">Welcome to My Portfolio</p>
+        <h2 class="caption">Welcome to My Portfolio</h2>
         <p class="description">
           I'm a passionate developer exploring the world of code.
         </p>
         <a href="#projects">View Projects</a>
       </section>
+      <!-- 🚀 End Hero Section -->
 
-      <!-- Add your about section here -->
+      <!-- 👤 Start About Section -->
       <section id="about">
-        <p class="caption">About Me</p>
+        <h2 class="caption">About Me</h2>
         <p class="description">
           Hello! I'm a web developer with a love for building creative and
           user-friendly websites. With a strong foundation in HTML, CSS,
           JavaScript, I aim to create engaging online experiences.
         </p>
       </section>
+       <!-- 👤 End About Section -->
 
-      <!-- Add your projects section here -->
+      <!-- 📁 Start Projects Section -->
       <section id="projects">
-        <p class="caption">My Projects</p>
+        <h2 class="caption">My Projects</h2>
         <div class="container">
-          <div class="project">
-            <p class="caption">Project 1</p>
+          <div class="project left-project">
+            <h3 class="caption">Project 1</h3>
             <p class="description">Description of the first project.</p>
           </div>
-          <div class="project">
-            <p class="caption">Project 2</p>
+
+          <div class="project middle-project">
+            <h3 class="caption">Project 2</h3>
             <p class="description">Description of the second project.</p>
           </div>
-          <div class="project">
-            <p class="caption">Project 3</p>
+
+          <div class="project right-project">
+            <h3 class="caption">Project 3</h3>
             <p class="description">Description of the third project.</p>
           </div>
         </div>
       </section>
+      <!-- 📁 End Projects Section -->
+
+      <!-- 🎞️ Start Slider Section -->
+      <section id="slider">
+        <h2 class="caption">What People Say</h2>
+        <div class="slider">
+          <div class="slide">
+            <img src="jane-doe.png" alt="Jane Doe" />
+            <p>
+              <q class="description"
+                ><em>This is the best service I have ever used!</em></q
+              >
+              <cite>- Jane Doe</cite>
+            </p>
+          </div>
+          <div class="slide">
+            <img src="john-smith.png" alt="John Smith" />
+            <p>
+              <q class="description"
+                ><em>Highly recommend to everyone looking for quality!</em></q
+              >
+              <cite>- John Smith</cite>
+            </p>
+          </div>
+          <div class="slide">
+            <img src="sarah-lee.png" alt="Sarah Lee" />
+            <p>
+              <q class="description"
+                ><em
+                  >An outstanding portfolio with great design and
+                  functionality!</em
+                ></q
+              >
+            </p>
+            <cite>- Sarah Lee</cite>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button id="prevSlide">❮</button>
+          <button id="nextSlide">❯</button>
+        </div>
+      </section>
+      <!-- 🎞️ End Slider Section -->
+
       <!-- Add your contact form section here -->
     </main>
 
