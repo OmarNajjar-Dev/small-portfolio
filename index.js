@@ -31,3 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add your form validation code here
   // Add your EmailJS integration code here
 });
+
+function sendMail() {
+  const info = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value
+  }
+
+  emailjs.send("service_ob9koas","template_76cpx2c", info);
+}
