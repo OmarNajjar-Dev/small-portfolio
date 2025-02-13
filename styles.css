@@ -198,9 +198,15 @@ nav a:hover {
   background: darkorange;
 }
 
-/* Add your contact form styles here */
-
-/* Add your footer styles here */
+/* 🔚 Footer Section */
+footer {
+  background-color: #333333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* 📱 Responsive Design */
 @media (max-width: 500px) {
