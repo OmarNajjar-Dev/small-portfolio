@@ -81,7 +81,7 @@ function sendMail() {
   };
 
   emailjs
-    .send("service_ob9koas", "template_76cpx2c", info)
+    .send("service_tjk4vcw", "template_76cpx2c", info)
     .then(() => {
       alert("Email sent successfully!");
       document.getElementById("contactForm").reset();
