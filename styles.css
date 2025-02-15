@@ -253,7 +253,7 @@ input[type="submit"]:hover {
 /* 🔚 Footer Section */
 footer {
   background-color: var(--dark-color);
-  color: var(--secondary-color);
+  color: white;
   padding: 15px;
   display: flex;
   justify-content: center;
