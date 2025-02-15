@@ -70,7 +70,7 @@ nav a:hover {
 #hero {
   background-color: orange;
   margin: 30px;
-  padding: 40px;
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,7 +257,7 @@ footer {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   nav {
     gap: 5px;
   }
