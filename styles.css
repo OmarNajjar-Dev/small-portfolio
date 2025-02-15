@@ -115,6 +115,15 @@ nav a:hover {
   margin-bottom: 50px;
 }
 
+#about p {
+  display: block;
+  max-width: 90%;
+  margin: auto;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 /* 📁 Projects Section */
 .container {
   display: flex;
@@ -263,19 +272,19 @@ footer {
 }
 
 /* 📱 Responsive Design */
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
   nav {
     gap: 15px;
   }
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 380px) {
   nav {
     gap: 10px;
   }
 }
 
-@media (max-width: 340px) {
+@media screen and (max-width: 340px) {
   header {
     padding: 15px;
   }
@@ -285,14 +294,14 @@ footer {
   }
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .project {
     flex-grow: 1;
     margin: 0 var(--margin-x);
   }
 }
 
-@media (min-width: 545px) {
+@media screen and (min-width: 545px) {
   .left-project {
     margin-right: 0;
   }
