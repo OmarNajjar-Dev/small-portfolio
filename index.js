@@ -50,25 +50,40 @@ function initializeFormValidation() {
 
 // 🛠 Validate form fields
 function validateForm() {
-  const email = document.getElementById("email").value;
-  const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const name = document.getElementById("name").value.trim();
+  const nameRegExp = /^(?!.*  )[a-zA-Z ]{2,}$/;
+  const email = document.getElementById("email").value.trim();
+  const emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const message = document.getElementById("message").value.trim();
 
-  if (!document.getElementById("name").value) {
-    alert("The name is required.");
+  // ✅ Name Validation
+  if (!name) {
+    alert("The name is required. Please enter your name.");
     return false;
   }
+  if (!nameRegExp.test(name)) {
+    alert(
+      "The name must be at least 2 letters, contain only letters and spaces, and have no extra spaces or line breaks."
+    );
+    return false;
+  }
+
+  // ✅ Email Validation
   if (!email) {
-    alert("The email is required.");
+    alert("The email is required. Please enter your email.");
     return false;
   }
-  if (!pattern.test(email)) {
-    alert("The email isn't correct.");
+  if (!emailRegExp.test(email)) {
+    alert("Please enter a valid email address (e.g., example@mail.com).");
     return false;
   }
-  if (!document.getElementById("message").value) {
-    alert("The message is required.");
+
+  // ✅ Message Validation
+  if (!message) {
+    alert("The message is required. Please write your message.");
     return false;
   }
+
   return true;
 }
 
