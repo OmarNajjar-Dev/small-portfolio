@@ -22,7 +22,7 @@ section {
 
 /* 🏷️ Typography */
 .caption {
-  font-size: var(--caption-size, 22px);
+  font-size: var(--caption-size, 20px);
   font-weight: bold;
   text-align: center;
   color: var(--caption-color, black);
@@ -38,11 +38,12 @@ section {
 /* 🏠 Header */
 header {
   --caption-color: white;
+  --caption-size: 22px;
   background-color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
+  padding: 15px 20px 15px 25px;
   position: fixed;
   top: 0;
   left: 0;
@@ -53,7 +54,7 @@ header {
 
 nav {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 nav a {
@@ -69,7 +70,7 @@ nav a:hover {
 /* 🚀 Hero Section */
 #hero {
   background-color: orange;
-  margin: 30px;
+  margin: 30px 25px;
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
@@ -77,6 +78,7 @@ nav a:hover {
   justify-content: center;
   --caption-color: white;
   --description-color: white;
+  --caption-size: 22px;
   gap: 5px;
 }
 
@@ -101,6 +103,7 @@ nav a:hover {
 /* 👤 About Section */
 #about {
   margin-bottom: 50px;
+
 }
 
 /* 📁 Projects Section */
@@ -127,11 +130,11 @@ nav a:hover {
 }
 
 .left-project {
-  margin-left: 30px;
+  margin-left: 25px;
 }
 
 .right-project {
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 /* 🎞️ Slider Section */
@@ -143,8 +146,9 @@ nav a:hover {
   overflow: hidden;
   position: relative;
   box-shadow: 0 4px 6px (0, 0, 0, 0.1);
-  margin: 30px;
+  margin: 30px 25px;
   padding: 30px 0 40px 0;
+  --caption-size: 26px;
   --description-weight: 500px;
 }
 
@@ -183,7 +187,7 @@ nav a:hover {
   font-style: normal;
   display: block;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: bold;
 }
 
@@ -251,13 +255,23 @@ footer {
 }
 
 /* 📱 Responsive Design */
-@media (max-width: 500px) {
-  header {
-    padding-right: 10px;
+@media (max-width: 400px) {
+  nav {
+    gap: 15px;
   }
 }
 
 @media (max-width: 380px) {
+  nav {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 340px) {
+  header {
+    padding: 15px;
+  }
+
   nav {
     gap: 5px;
   }
@@ -266,7 +280,7 @@ footer {
 @media (max-width: 800px) {
   .project {
     flex-grow: 1;
-    margin: 0 30px;
+    margin: 0 25px;
   }
 }
 
