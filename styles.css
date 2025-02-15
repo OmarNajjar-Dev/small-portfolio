@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -252,7 +257,7 @@ footer {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 350px) {
   nav {
     gap: 5px;
   }
