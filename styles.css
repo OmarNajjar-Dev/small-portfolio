@@ -1,4 +1,17 @@
 /* 🌍 Global Styles */
+:root {
+  /* 🎨 Colors*/
+  --primary-color: orange;
+  --secondary-color: white;
+  --dark-color: #333333;
+  --accent-color: darkorange;
+
+  /* 🖼️ General formats */
+  --border-radius: 5px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --margin-x: 25px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,14 +45,13 @@ section {
   font-size: 14px;
   text-align: center;
   color: var(--description-color, black);
-  font-weight: var(--description-weight, normal);
 }
 
 /* 🏠 Header */
 header {
-  --caption-color: white;
+  --caption-color: var(--secondary-color);
   --caption-size: 22px;
-  background-color: #333333;
+  background-color: var(--dark-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,7 +60,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   z-index: 1;
 }
 
@@ -58,52 +70,49 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: var(--secondary-color);
   text-decoration: none;
   font-size: 14px;
+  transition: color 0.3s ease-in-out;
 }
 
 nav a:hover {
-  color: orange;
+  color: var(--primary-color);
 }
 
 /* 🚀 Hero Section */
 #hero {
-  background-color: orange;
-  margin: 30px 25px;
+  --caption-color: var(--secondary-color);
+  --description-color: var(--secondary-color);
+  --caption-size: 22px;
+  background-color: var(--primary-color);
+  margin: 30px var(--margin-x);
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  --caption-color: white;
-  --description-color: white;
-  --caption-size: 22px;
-  gap: 5px;
 }
 
 #hero a {
-  color: orange;
-  background-color: white;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   font-weight: bold;
   text-decoration: none;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  padding: 5px 15px;
+  margin-top: 5px;
   transition: transform 0.3s ease-in-out;
 }
 
 #hero a:hover {
   transform: scale(1.1);
-}
-
-#hero a:active {
-  color: darkorange;
+  color: var(--accent-color);
 }
 
 /* 👤 About Section */
 #about {
   margin-bottom: 50px;
-
 }
 
 /* 📁 Projects Section */
@@ -111,17 +120,16 @@ nav a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto;
   gap: 25px;
 }
 
 .project {
+  --caption-size: 16px;
   background-color: #f0f0f0;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   padding: 15px;
   box-shadow: 0 4px 6px rgba(80, 80, 80, 0.2);
   flex-basis: 230px;
-  --caption-size: 16px;
 }
 
 .project:hover {
@@ -130,26 +138,24 @@ nav a:hover {
 }
 
 .left-project {
-  margin-left: 25px;
+  margin-left: var(--margin-x);
 }
 
 .right-project {
-  margin-right: 25px;
+  margin-right: var(--margin-x);
 }
 
 /* 🎞️ Slider Section */
 #slider {
+  --caption-size: 26px;
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 6px (0, 0, 0, 0.1);
-  margin: 30px 25px;
+  margin: 30px var(--margin-x);
   padding: 30px 0 40px 0;
-  --caption-size: 26px;
-  --description-weight: 500px;
 }
 
 .slider {
@@ -181,6 +187,7 @@ nav a:hover {
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  font-weight: 500;
 }
 
 .slide cite {
@@ -199,18 +206,18 @@ nav a:hover {
 }
 
 .slider-controls button {
-  background: orange;
+  background: var(--primary-color);
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   font-size: inherit;
   margin: 0 5px;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   transition: background 0.3s ease-in-out;
 }
 
 .slider-controls button:hover {
-  background: darkorange;
+  background: var(--accent-color);
 }
 
 /* 📞 Contact Section */
@@ -226,32 +233,32 @@ textarea {
   display: block;
   padding: 10px;
   margin-top: 20px;
-  border: 1px solid;
-  border-radius: 5px;
+  border: 1px solid black;
+  border-radius: var(--border-radius);
   font-size: 16px;
 }
 
 input[type="submit"] {
-  background-color: orange;
+  background-color: var(--primary-color);
   color: white;
   font-size: 14px;
   transition: background 0.3s ease-in-out;
 }
 
 input[type="submit"]:hover {
-  background-color: darkorange;
+  background-color: var(--accent-color);
 }
 
 /* 🔚 Footer Section */
 footer {
-  background-color: #333333;
+  background-color: var(--dark-color);
   color: white;
   padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 90px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 /* 📱 Responsive Design */
@@ -280,7 +287,7 @@ footer {
 @media (max-width: 800px) {
   .project {
     flex-grow: 1;
-    margin: 0 25px;
+    margin: 0 var(--margin-x);
   }
 }
 
