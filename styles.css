@@ -134,7 +134,7 @@ nav a:hover {
 
 .project {
   --caption-size: 16px;
-  background-color: #f0f0f0;
+  background-color: #eee;
   border-radius: var(--border-radius);
   padding: 15px;
   box-shadow: 0 4px 6px rgba(80, 80, 80, 0.2);
@@ -157,7 +157,7 @@ nav a:hover {
 /* 🎞️ Slider Section */
 #slider {
   --caption-size: 26px;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   align-items: center;
