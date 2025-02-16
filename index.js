@@ -90,9 +90,9 @@ function validateForm() {
 // ✉️ Send an email using EmailJS
 function sendMail() {
   const info = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
+    name: document.getElementById("name").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    message: document.getElementById("message").value.trim(),
   };
 
   emailjs
