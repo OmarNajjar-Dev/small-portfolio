@@ -4,6 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeFormValidation();
 });
 
+const projects = [
+  { title: "Project 1", description: "Description of the first project" },
+  { title: "Project 2", description: "Description of the second project" },
+  { title: "Project 3", description: "Description of the third project" },
+];
+
+const divContainer = document.querySelector(".container");
+const projectDivs = projects.map((project) => {
+  const projectDiv = document.createElement("div");
+  projectDiv.className = "project";
+  projectDiv.innerHTML = `<h3 class='caption'>${project.title}</h3><p class='description'>${project.description}</p>`;
+  return projectDiv;
+});
+projectDivs.forEach((projectDiv) => divContainer.appendChild(projectDiv));
+
 // 🎞️ Initialize the slider
 function initializeSlider() {
   const slider = document.querySelector(".slider");
@@ -43,7 +58,7 @@ function initializeFormValidation() {
     .addEventListener("click", (event) => {
       event.preventDefault();
       if (validateForm()) {
-        sendMail();
+        sendEmail();
       }
     });
 }
@@ -88,18 +103,33 @@ function validateForm() {
 }
 
 // ✉️ Send an email using EmailJS
-function sendMail() {
-  const info = {
-    name: document.getElementById("name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    message: document.getElementById("message").value.trim(),
+const sendEmail = async () => {
+  const url = "https://api.emailjs.com/api/v1.0/email/send";
+
+  const data = {
+    service_id: "service_tjk4vcw",
+    template_id: "template_76cpx2c",
+    user_id: "HYJ9rNlhhrXT4tlMY",
+    template_params: {
+      name: document.getElementById("name").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      message: document.getElementById("message").value.trim(),
+    },
   };
 
-  emailjs
-    .send("service_tjk4vcw", "template_76cpx2c", info)
-    .then(() => {
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
       alert("Email sent successfully!");
-      document.getElementById("contactForm").reset();
-    })
-    .catch((error) => alert("Error sending email: " + error));
-}
+    } else {
+      alert("Email sending failed:" + await response.text());
+    }
+  } catch (error) {
+    alert("An error occurred:" + error);
+  }
+};

@@ -33,6 +33,10 @@ section {
   margin-bottom: 30px;
 }
 
+main {
+  margin: 1.5em;
+}
+
 /* 🏷️ Typography */
 .caption {
   font-size: var(--caption-size, 20px);
@@ -61,12 +65,12 @@ header {
   left: 0;
   width: 100%;
   box-shadow: var(--box-shadow);
-  z-index: 1;
+  z-index: 1000;
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 1.5em;
 }
 
 nav a {
@@ -86,7 +90,6 @@ nav a:hover {
   --description-color: var(--secondary-color);
   --caption-size: 22px;
   background-color: var(--primary-color);
-  margin: 30px var(--margin-x);
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
@@ -146,14 +149,6 @@ nav a:hover {
   transition: transform 0.3s ease-in-out;
 }
 
-.left-project {
-  margin-left: var(--margin-x);
-}
-
-.right-project {
-  margin-right: var(--margin-x);
-}
-
 /* 🎞️ Slider Section */
 #slider {
   --caption-size: 26px;
@@ -163,7 +158,6 @@ nav a:hover {
   align-items: center;
   overflow: hidden;
   position: relative;
-  margin: 30px var(--margin-x);
   padding: 30px 0 40px 0;
 }
 
@@ -272,18 +266,6 @@ footer {
 }
 
 /* 📱 Responsive Design */
-@media screen and (max-width: 400px) {
-  nav {
-    gap: 15px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  nav {
-    gap: 10px;
-  }
-}
-
 @media screen and (max-width: 340px) {
   header {
     padding: 15px;
@@ -297,16 +279,15 @@ footer {
 @media screen and (max-width: 800px) {
   .project {
     flex-grow: 1;
-    margin: 0 var(--margin-x);
   }
 }
 
 @media screen and (min-width: 545px) {
-  .left-project {
+  .project:nth-of-type(1) {
     margin-right: 0;
   }
 
-  .middle-project {
+  .project:nth-of-type(2) {
     margin-left: 0;
   }
 }
