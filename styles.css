@@ -26,7 +26,6 @@ html {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  padding-top: 60px;
 }
 
 section {
@@ -60,10 +59,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px 15px 25px;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   box-shadow: var(--box-shadow);
   z-index: 1000;
 }
@@ -105,12 +102,12 @@ nav a:hover {
   border-radius: var(--border-radius);
   padding: 5px 15px;
   margin-top: 5px;
-  transition: transform 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 #hero a:hover {
-  transform: scale(1.1);
-  color: var(--accent-color);
+  color: var(--secondary-color);
+  background-color: var(--dark-color);
 }
 
 /* 👤 About Section */
