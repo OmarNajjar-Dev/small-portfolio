@@ -268,8 +268,8 @@ footer {
   }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 480px) {
    header nav {
-    gap: 0.7rem;
+    gap: 1rem;
   }
 }
