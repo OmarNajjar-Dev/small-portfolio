@@ -66,7 +66,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px 15px 25px;
+  padding: 15px 25px;
   position: sticky;
   top: 0;
   box-shadow: var(--box-shadow);
@@ -189,6 +189,7 @@ header nav a:hover {
 }
 
 .slide cite {
+  font-style: normal;
   display: block;
   margin-top: 10px;
   font-weight: bold;
@@ -241,6 +242,7 @@ input[type="submit"] {
   color: var(--white);
   font-size: var(--text-size);
   transition: background 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
@@ -262,7 +264,7 @@ footer {
 /* 📱 Responsive Design */
 @media screen and (max-width: 788px) {
   header nav {
-    gap: 1em;
+    gap: 0.8em;
   }
 
   .project {
