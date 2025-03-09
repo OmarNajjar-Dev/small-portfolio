@@ -35,7 +35,7 @@ section {
 }
 
 main {
-  margin: 1.5em;
+  padding: 1.5em;
 }
 
 /* 🏷️ Typography */
@@ -54,8 +54,6 @@ main {
 
 /* 🏠 Header */
 header {
-  --caption-color: var(--white);
-  --caption-size: 22px;
   background-color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
@@ -67,19 +65,24 @@ header {
   z-index: 1000;
 }
 
-nav {
+header h1 {
+  font-size: 22px;
+  color: white;
+}
+
+header nav {
   display: flex;
   gap: 1.5em;
 }
 
-nav a {
+header nav a {
   color: var(--white);
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease-in-out;
 }
 
-nav a:hover {
+header nav a:hover {
   color: var(--primary-color);
 }
 
@@ -265,28 +268,13 @@ footer {
 }
 
 /* 📱 Responsive Design */
-@media screen and (max-width: 340px) {
-  header {
-    padding: 15px;
-  }
-
-  nav {
-    gap: 5px;
-  }
-}
 
 @media screen and (max-width: 800px) {
+  header nav {
+    gap: 1em;
+  }
+
   .project {
     flex-grow: 1;
-  }
-}
-
-@media screen and (min-width: 545px) {
-  .project:nth-of-type(1) {
-    margin-right: 0;
-  }
-
-  .project:nth-of-type(2) {
-    margin-left: 0;
   }
 }
