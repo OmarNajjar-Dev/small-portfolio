@@ -28,6 +28,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  text-align: center;
 }
 
 section {
@@ -38,18 +39,16 @@ main {
   padding: 1.5em;
 }
 
-/* 🏷️ Typography */
-.caption {
-  font-size: var(--caption-size, 20px);
-  font-weight: bold;
-  text-align: center;
-  color: var(--caption-color, black);
+h2 {
+  font-size: 20px;
 }
 
-.description {
+h3 {
+  font-size: 16px;
+}
+
+p {
   font-size: 14px;
-  text-align: center;
-  color: var(--description-color, black);
 }
 
 /* 🏠 Header */
@@ -88,24 +87,23 @@ header nav a:hover {
 
 /* 🚀 Hero Section */
 #hero {
-  --caption-color: var(--white);
-  --description-color: var(--white);
-  --caption-size: 22px;
+  color: var(--white);
   background-color: var(--primary-color);
   padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+#hero .caption {
+  font-size: 22px;
 }
 
 #hero a {
+  display: inline-block;
   color: var(--primary-color);
   background-color: var(--white);
   font-weight: bold;
   text-decoration: none;
   border-radius: var(--border-radius);
-  padding: 5px 15px;
+  padding: 0.3em 1em;
   margin-top: 5px;
   transition: background 0.3s ease-in-out;
 }
@@ -120,15 +118,6 @@ header nav a:hover {
   margin-bottom: 50px;
 }
 
-#about p {
-  display: block;
-  max-width: 90%;
-  margin: auto;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
 /* 📁 Projects Section */
 .container {
   display: flex;
@@ -138,7 +127,6 @@ header nav a:hover {
 }
 
 .project {
-  --caption-size: 16px;
   background-color: var(--project-color);
   border-radius: var(--border-radius);
   padding: 15px;
@@ -153,7 +141,6 @@ header nav a:hover {
 
 /* 🎞️ Slider Section */
 #testimonials {
-  --caption-size: 26px;
   background-color: var(--testimonials-color);
   display: flex;
   flex-direction: column;
@@ -161,6 +148,10 @@ header nav a:hover {
   overflow: hidden;
   position: relative;
   padding: 30px 0 40px 0;
+}
+
+#testimonials .caption {
+  font-size: 26px;
 }
 
 .slider {
@@ -171,7 +162,6 @@ header nav a:hover {
 .slide {
   box-sizing: border-box;
   min-width: 100%;
-  text-align: center;
   opacity: 0.7;
 }
 
@@ -181,24 +171,17 @@ header nav a:hover {
   border: 2px solid black;
   border-radius: 50%;
   margin: 35px 0 10px;
-  object-fit: cover;
 }
 
 .slide q {
   display: block;
   max-width: 50%;
-  text-align: center;
   margin: auto;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
   font-weight: 500;
 }
 
 .slide cite {
-  font-style: normal;
   display: block;
-  text-align: center;
   margin-top: 10px;
   font-weight: bold;
 }
@@ -211,7 +194,8 @@ header nav a:hover {
 }
 
 .slider-controls button {
-  background: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   border: none;
   padding: 5px 10px;
   cursor: pointer;
@@ -235,8 +219,7 @@ form {
 
 input,
 textarea {
-  display: block;
-  padding: 10px;
+  padding: 15px;
   margin-top: 20px;
   border: 1px solid black;
   border-radius: var(--border-radius);
@@ -263,7 +246,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  margin-top: 50px;
   box-shadow: var(--box-shadow);
 }
 

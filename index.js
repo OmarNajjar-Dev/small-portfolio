@@ -14,7 +14,7 @@ const divContainer = document.querySelector(".container");
 const projectDivs = projects.map((project) => {
   const projectDiv = document.createElement("div");
   projectDiv.className = "project";
-  projectDiv.innerHTML = `<h3 class='caption'>${project.title}</h3><p class='description'>${project.description}</p>`;
+  projectDiv.innerHTML = `<h3>${project.title}</h3><p class='description'>${project.description}</p>`;
   return projectDiv;
 });
 projectDivs.forEach((projectDiv) => divContainer.appendChild(projectDiv));
