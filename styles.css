@@ -4,6 +4,8 @@
   --primary-color: orange;
   --secondary-color: white;
   --dark-color: #333333;
+  --project-color: #eeeeee;
+  --testimonials-color: #f9f9f9;
   --accent-color: darkorange;
 
   /* 🖼️ General formats */
@@ -134,7 +136,7 @@ nav a:hover {
 
 .project {
   --caption-size: 16px;
-  background-color: #eee;
+  background-color: var(--project-color);
   border-radius: var(--border-radius);
   padding: 15px;
   box-shadow: 0 4px 6px rgba(80, 80, 80, 0.2);
@@ -147,9 +149,9 @@ nav a:hover {
 }
 
 /* 🎞️ Slider Section */
-#slider {
+#testimonials {
   --caption-size: 26px;
-  background-color: #f9f9f9;
+  background-color: var(--testimonials-color);
   display: flex;
   flex-direction: column;
   align-items: center;
