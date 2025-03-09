@@ -258,7 +258,7 @@ footer {
 
 /* 📱 Responsive Design */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 788px) {
   header nav {
     gap: 1em;
   }
